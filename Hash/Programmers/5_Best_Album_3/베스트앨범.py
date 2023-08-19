@@ -1,4 +1,4 @@
-def solution(genres, plays):
+def solution(genres, plays): # 코드 참고
     answer = []
     temp = []
     total_genre_d = {}
@@ -12,7 +12,7 @@ def solution(genres, plays):
         else:
             total_genre_d[g[0]] += g[1]
     
-    total_genre_d = sorted(total_genre_d.items(), key = lambda x: -x[1])    # 재생횟수가 많은 순서로 장르 정렬 => 여기부터 코드 참고
+    total_genre_d = sorted(total_genre_d.items(), key = lambda x: -x[1])    # 재생횟수가 많은 순서로 장르 정렬
     
     for i in total_genre_d: # 같은 장르 내에서는 최대 2곡까지 조건대로 수록
         count = 0
