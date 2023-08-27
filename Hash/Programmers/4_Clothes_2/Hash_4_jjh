@@ -1,0 +1,17 @@
+from collections import Counter
+from functools import reduce
+import itertools
+
+def solution(clothes):
+    answer = len(clothes)
+    cloth = Counter([i[1] for i in clothes])
+    
+    for i in range(2, len(cloth.keys())+1):
+        com_list = list(itertools.combinations(cloth.values(), i))
+        for n in com_list:
+            answer += multiple(n)
+    return answer
+
+def multiple(c_list):
+    return reduce(lambda x, y: x * y, c_list)
+
