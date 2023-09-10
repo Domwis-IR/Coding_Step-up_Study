@@ -13,7 +13,6 @@ def solution(genres, plays):
         s_dict = sorted(value, reverse =True)
         temp_sum = sum([i[0] for i in value])
         n_dict[temp_sum] = s_dict
-    print (n_dict)
         
     while n_dict:
         temp_m = max(n_dict.keys())
